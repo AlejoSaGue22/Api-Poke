@@ -1,7 +1,6 @@
 import React from 'react'
 import '../css/contenedor.css'
 import {useApipoke} from '../hooks/useApipoke'
-import Items from './Items'
 import { firebase } from '../firebase'
 import { BiTrashAlt, BiEditAlt } from 'react-icons/bi'
 import 'animate.css'
@@ -42,7 +41,7 @@ export const ApiContenedor = ({ valorBusqueda }) => {
   return (
     <>
       {cargando && (
-        <p className='animate__animated animate__rubberBand'>Cargando...</p>
+        <p className='animate__animated animate__flash'>Cargando...</p>
       )}
 
       <div
@@ -50,7 +49,7 @@ export const ApiContenedor = ({ valorBusqueda }) => {
         id='contenedor'
       >
         {
-          <div className='card animate__animated animate__fadeInDownBig'>
+          <div className='card animate__animated animate__fadeIn'>
             <p>{valorBusqueda.nombre}</p>
             <img src={valorBusqueda.url} alt={valorBusqueda.nombre} />
           </div>

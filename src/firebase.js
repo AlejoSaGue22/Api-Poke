@@ -3,7 +3,6 @@
 import firebase from "firebase/app";
 import 'firebase/firestore'
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyA2wg2ioVHou1PRqWKCqAtaycMMBcvXp9I",
   authDomain: "apppoke-81318.firebaseapp.com",
@@ -13,6 +12,6 @@ const firebaseConfig = {
   appId: "1:190746933301:web:66d4048a69e76fb93cd97c",
   measurementId: "G-2YG1VHVLMT"
 };
-// Initialize Firebase
+
 firebase.initializeApp(firebaseConfig);
 export{firebase}

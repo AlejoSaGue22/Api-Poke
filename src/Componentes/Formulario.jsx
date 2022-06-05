@@ -57,12 +57,12 @@ export const Formulario =({setCategoriasBusqueda})=>{
                 <p>Buscar Pokemon</p>
                 <input 
                     type="text" 
-                    placeholder=" Que pokemon desea buscar" 
+                    placeholder=" Que pokemon desea buscar ?" 
                     id="Valorusqueda"
                     value = {valorBusqueda}
                     onChange={cambiarValorBusqueda}
                 />
-                <button className='boton' type="submit"> Buscar </button>
+                <button className='boton' type="submit"> Buscar Pokemones </button>
             </form>
         </>
     );
