@@ -1,12 +1,12 @@
 import {shallow} from 'enzyme';
 import '@testing-library/jest-dom';
-import AgregarBusqueda from '../../components/AgregarBusqueda';
+import Formulario from '../../Componentes/Formulario';
 
-describe('Pruebas en <AgregarCategoria/>',() => {
+describe('Pruebas en <Formulario/>',() => {
 
     test('debe cambiar la caja de texto', () =>{
         const funcion_prueba = jest.fn();
-        const wrapper = shallow(<AgregarBusqueda setCategoriasBusqueda={funcion_prueba}/>)
+        const wrapper = shallow(<Formulario setCategoriasBusqueda={funcion_prueba}/>)
         const input = wrapper.find('input');
         const value = 'Hola Mundo';
 
@@ -17,7 +17,7 @@ describe('Pruebas en <AgregarCategoria/>',() => {
 
     test('NO debe llamar a la función setCategoriasBusqueda', () =>{
         const setCategorias = jest.fn();
-        const wrapper = shallow(<AgregarBusqueda setCategoriasBusqueda={setCategorias}/>)
+        const wrapper = shallow(<Formulario setCategoriasBusqueda={setCategorias}/>)
         
         wrapper.find('form').simulate('submit', {preventDefault(){}});
         expect(setCategorias).not.toHaveBeenCalled();
@@ -25,7 +25,7 @@ describe('Pruebas en <AgregarCategoria/>',() => {
 
     test('debe llamar a la funcion setCategorias y limpiar la caja de texto', () =>{
         const setCategorias = jest.fn();
-        const wrapper = shallow(<AgregarBusqueda setCategoriasBusqueda={setCategorias}/>)
+        const wrapper = shallow(<Formulario setCategoriasBusqueda={setCategorias}/>)
         const value = 'simpson';
 
 
