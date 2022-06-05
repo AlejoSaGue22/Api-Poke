@@ -1,5 +1,5 @@
 Netifly
-https://629c7e62bf1f712cae722332--preeminent-torte-2a166f.netlify.app/
+https://pokemon-dex-api.netlify.app/  
 
 
 
